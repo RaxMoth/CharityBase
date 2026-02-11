@@ -1,0 +1,136 @@
+{
+    "charities": [
+        {
+            "id": "gfi-001",
+            "name": "Global Food Initiative",
+            "description": "Providing nutritious meals to hungry children in developing nations",
+            "longDescription": "Global Food Initiative works in over 50 countries to combat child malnutrition and food insecurity. We partner with local communities to create sustainable food systems and educational programs.",
+            "category": "Food Security",
+            "logo": "https://via.placeholder.com/80?text=GFI",
+            "monthlyPrice": 5,
+            "impact": "Feeds a child for one day",
+            "donors": 12543,
+            "verified": true,
+            "registeredYear": 2010,
+            "countriesActive": ["Kenya", "Uganda", "Tanzania", "Ethiopia"],
+            "website": "https://example.com/gfi",
+            "impactMetrics": {
+                "childrenFed": 450000,
+                "meals": 2100000,
+                "schools": 280
+            },
+            "stripePriceId": "price_1234567890",
+            "stripe_account_id": "acct_gfi_001"
+        },
+        {
+            "id": "cwf-002",
+            "name": "Clean Water Foundation",
+            "description": "Building wells and water stations in remote communities",
+            "longDescription": "Clean Water Foundation installs sustainable water infrastructure in areas that lack access to clean drinking water. We've served 2+ million people across Africa and Asia.",
+            "category": "Water & Sanitation",
+            "logo": "https://via.placeholder.com/80?text=CWF",
+            "monthlyPrice": 8,
+            "impact": "Provides clean water for 5 families",
+            "donors": 8945,
+            "verified": true,
+            "registeredYear": 2008,
+            "countriesActive": ["Ethiopia", "Niger", "Chad", "Pakistan"],
+            "website": "https://example.com/cwf",
+            "impactMetrics": {
+                "familiesServed": 125000,
+                "wellsBuilt": 1250,
+                "litersDaily": 500000
+            },
+            "stripePriceId": "price_0987654321",
+            "stripe_account_id": "acct_cwf_002"
+        },
+        {
+            "id": "efa-003",
+            "name": "Education for All",
+            "description": "Opening schools and supporting teachers in underserved areas",
+            "longDescription": "Education for All believes every child deserves access to quality education. We build schools, train teachers, and provide scholarships to talented children worldwide.",
+            "category": "Education",
+            "logo": "https://via.placeholder.com/80?text=EFA",
+            "monthlyPrice": 10,
+            "impact": "Educates a child for one month",
+            "donors": 15230,
+            "verified": true,
+            "registeredYear": 2012,
+            "countriesActive": ["Bangladesh", "Myanmar", "Laos", "Cambodia"],
+            "website": "https://example.com/efa",
+            "impactMetrics": {
+                "childrenEducated": 280000,
+                "schoolsBuilt": 450,
+                "scholarships": 85000
+            },
+            "stripePriceId": "price_1122334455",
+            "stripe_account_id": "acct_efa_003"
+        },
+        {
+            "id": "mri-004",
+            "name": "Medical Relief International",
+            "description": "Delivering healthcare and medicines to communities in need",
+            "longDescription": "Medical Relief International operates mobile clinics, trains local health workers, and provides essential medicines to underserved regions. We've treated 5+ million patients.",
+            "category": "Healthcare",
+            "logo": "https://via.placeholder.com/80?text=MRI",
+            "monthlyPrice": 15,
+            "impact": "Provides medical care for 3 people",
+            "donors": 6789,
+            "verified": true,
+            "registeredYear": 2009,
+            "countriesActive": ["Congo", "South Sudan", "Haiti", "Yemen"],
+            "website": "https://example.com/mri",
+            "impactMetrics": {
+                "patientsServed": 250000,
+                "clinics": 85,
+                "vaccinated": 450000
+            },
+            "stripePriceId": "price_5566778899",
+            "stripe_account_id": "acct_mri_004"
+        },
+        {
+            "id": "ec-005",
+            "name": "Environmental Conservation",
+            "description": "Protecting forests, wildlife, and ecosystems for future generations",
+            "longDescription": "Environmental Conservation works to protect the world's most critical ecosystems. We plant trees, protect endangered species, and combat climate change through community engagement.",
+            "category": "Environment",
+            "logo": "https://via.placeholder.com/80?text=EC",
+            "monthlyPrice": 7,
+            "impact": "Plants 10 trees for reforestation",
+            "donors": 9876,
+            "verified": true,
+            "registeredYear": 2005,
+            "countriesActive": ["Brazil", "Indonesia", "Madagascar", "Peru"],
+            "website": "https://example.com/ec",
+            "impactMetrics": {
+                "treesPlanted": 850000,
+                "landProtected": 125000,
+                "speciesSaved": 34
+            },
+            "stripePriceId": "price_9900112233",
+            "stripe_account_id": "acct_ec_005"
+        },
+        {
+            "id": "yep-006",
+            "name": "Youth Empowerment Program",
+            "description": "Training youth with skills to transform their communities",
+            "longDescription": "Youth Empowerment Program provides vocational training, mentorship, and employment support to young people. We focus on creating opportunities and breaking cycles of poverty.",
+            "category": "Community Development",
+            "logo": "https://via.placeholder.com/80?text=YEP",
+            "monthlyPrice": 12,
+            "impact": "Trains one youth for a better future",
+            "donors": 5432,
+            "verified": true,
+            "registeredYear": 2015,
+            "countriesActive": ["South Africa", "Nigeria", "Kenya", "Ghana"],
+            "website": "https://example.com/yep",
+            "impactMetrics": {
+                "youthTrained": 85000,
+                "employed": 42000,
+                "skillsPrograms": 156
+            },
+            "stripePriceId": "price_4455667788",
+            "stripe_account_id": "acct_yep_006"
+        }
+    ]
+}
