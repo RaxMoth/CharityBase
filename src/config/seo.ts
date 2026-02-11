@@ -57,7 +57,12 @@ export const PAGE_META: Record<string, MetaTags> = {
         title: "Your Dashboard | CharityBase - Manage Your Impact",
         description:
             "View your active subscriptions, track your monthly commitment, and manage your donations to verified charities.",
-        keywords: ["dashboard", "my donations", "subscriptions", "impact tracking"],
+        keywords: [
+            "dashboard",
+            "my donations",
+            "subscriptions",
+            "impact tracking",
+        ],
         ogType: "website",
     },
     about: {
@@ -95,7 +100,8 @@ export const PAGE_META: Record<string, MetaTags> = {
     },
     login: {
         title: "Login | CharityBase - Manage Your Donations",
-        description: "Sign in to manage your subscriptions and track your impact.",
+        description:
+            "Sign in to manage your subscriptions and track your impact.",
         keywords: ["login", "sign in", "account"],
         ogType: "website",
     },
@@ -163,7 +169,9 @@ export const generateCharitySchema = (charity: {
     },
 });
 
-export const generateBreadcrumbSchema = (items: Array<{ name: string; url: string }>): StructuredData => ({
+export const generateBreadcrumbSchema = (
+    items: Array<{ name: string; url: string }>,
+): StructuredData => ({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: items.map((item, index) => ({

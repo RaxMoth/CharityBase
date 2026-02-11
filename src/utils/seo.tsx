@@ -74,7 +74,10 @@ export const useSEOMeta = (props: SEOHeadProps) => {
             <meta property="og:image" content={ogImage} />
             <meta property="og:type" content={ogType} />
             <meta property="og:site_name" content={SITE_CONFIG.name} />
-            <meta property="og:url" content={canonicalUrl || window.location.href} />
+            <meta
+                property="og:url"
+                content={canonicalUrl || window.location.href}
+            />
 
             {/* Twitter Card Tags */}
             <meta name="twitter:card" content={twitterCard} />
@@ -102,7 +105,10 @@ export const useSEOMeta = (props: SEOHeadProps) => {
 /**
  * Generate meta description from content (max 160 chars)
  */
-export const truncateDescription = (text: string, maxLength: number = 160): string => {
+export const truncateDescription = (
+    text: string,
+    maxLength: number = 160,
+): string => {
     if (text.length <= maxLength) return text;
     return text.slice(0, maxLength - 3) + "...";
 };
@@ -161,11 +167,9 @@ export const logEvent = (eventName: string, eventData: Record<string, any>) => {
  * Format breadcrumb for rich snippets
  */
 export const formatBreadcrumbPath = (
-    path: string
+    path: string,
 ): Array<{ name: string; url: string }> => {
-    const segments = path
-        .split("/")
-        .filter((s) => s.length > 0);
+    const segments = path.split("/").filter((s) => s.length > 0);
 
     const breadcrumbs = [{ name: "Home", url: "/" }];
 
@@ -201,6 +205,8 @@ export const lazyLoadImages = () => {
             });
         });
 
-        document.querySelectorAll("img.lazy").forEach((img) => imageObserver.observe(img));
+        document
+            .querySelectorAll("img.lazy")
+            .forEach((img) => imageObserver.observe(img));
     }
 };
