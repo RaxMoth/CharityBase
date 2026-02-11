@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
+import Layout from "./components/Layout/Layout";
 import LandingPage from "./LandingPage";
 import Charities from "./Charities";
 import Subscriptions from "./Subscriptions";

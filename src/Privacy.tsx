@@ -1,6 +1,16 @@
 import React from "react";
+import { useSEOMeta } from "./utils/seo";
+import { PAGE_META, SITE_CONFIG } from "./config/seo";
 
 const Privacy: React.FC = () => {
+    const meta = PAGE_META.privacy;
+
+    useSEOMeta({
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        canonicalUrl: `${SITE_CONFIG.url}/privacy`,
+    });
     return (
         <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-amber-50 to-blue-50">
             <div className="max-w-4xl mx-auto px-4 py-20">

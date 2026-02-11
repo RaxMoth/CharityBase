@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useAppStore } from "./stores/useAppStore";
+import { useAppStore } from "./stores";
 import { Heart, Trash2, ArrowRight } from "lucide-react";
 
 const Subscriptions: React.FC = () => {

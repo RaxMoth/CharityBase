@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { useAuthStore } from "../stores/useAuthStore";
+import { useAuthStore } from "../../stores/useAuthStore";
 
 interface LayoutProps {
     children: React.ReactNode;

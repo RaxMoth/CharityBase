@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { CheckCircle, Heart, ArrowRight } from "lucide-react";
-import { useAppStore } from "./stores/useAppStore";
+import { useAppStore } from "./stores";
 
 const Confirmation: React.FC = () => {
     const navigate = useNavigate();

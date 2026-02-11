@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Heart, ShoppingBag } from "lucide-react";
-import { useAppStore } from "../stores/useAppStore";
-import { useAuthStore } from "../stores/useAuthStore";
+import { useAppStore } from "../../stores/useAppStore";
+import { useAuthStore } from "../../stores/useAuthStore";
 
 const Header: React.FC = () => {
     const { getCartCount } = useAppStore();

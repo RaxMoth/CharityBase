@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { useAuthStore } from "./stores/useAuthStore";
+import { useAuthStore } from "./stores";
 import { Heart, ArrowRight, AlertCircle, Check } from "lucide-react";
 
 const Signup: React.FC = () => {

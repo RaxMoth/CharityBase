@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Search } from "lucide-react";
-import CharityCard from "./components/CharityCard";
+import { CharityCard } from "./components";
+import { useSEOMeta } from "./utils/seo";
+import { PAGE_META, SITE_CONFIG } from "./config/seo";
 
 const CHARITIES = [
     {
@@ -75,6 +77,14 @@ const CharitiesPage: React.FC = () => {
     const [selectedCategory, setSelectedCategory] = useState<string | null>(
         null,
     );
+    const meta = PAGE_META.charities;
+
+    useSEOMeta({
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        canonicalUrl: `${SITE_CONFIG.url}/charities`,
+    });
 
     const categories = Array.from(new Set(CHARITIES.map((c) => c.category)));
 

@@ -1,13 +1,23 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuthStore } from "./stores/useAuthStore";
-import { useAppStore } from "./stores/useAppStore";
+import { useAuthStore } from "./stores";
+import { useAppStore } from "./stores";
 import { LogOut, Plus, Trash2, Heart } from "lucide-react";
+import { useSEOMeta } from "./utils/seo";
+import { PAGE_META, SITE_CONFIG } from "./config/seo";
 
 const Dashboard: React.FC = () => {
     const navigate = useNavigate();
     const { user, logout } = useAuthStore();
     const { cart, removeFromCart, getTotalMonthly } = useAppStore();
+    const meta = PAGE_META.dashboard;
+
+    useSEOMeta({
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        canonicalUrl: `${SITE_CONFIG.url}/dashboard`,
+    });
 
     const handleLogout = () => {
         logout();

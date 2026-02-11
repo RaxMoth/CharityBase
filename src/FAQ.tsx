@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { useSEOMeta } from "./utils/seo";
+import { PAGE_META, SITE_CONFIG } from "./config/seo";
 
 interface FAQItem {
     question: string;
@@ -91,6 +93,14 @@ const FAQItemComponent: React.FC<{
 
 const FAQ: React.FC = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const meta = PAGE_META.faq;
+
+    useSEOMeta({
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        canonicalUrl: `${SITE_CONFIG.url}/faq`,
+    });
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-amber-50 to-blue-50">

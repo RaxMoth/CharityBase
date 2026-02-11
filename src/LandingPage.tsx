@@ -1,8 +1,23 @@
 import { useNavigate } from "react-router-dom";
 import { Heart, Gift, Users, Zap } from "lucide-react";
+import { useSEOMeta } from "./utils/seo";
+import {
+    PAGE_META,
+    generateOrganizationSchema,
+    SITE_CONFIG,
+} from "./config/seo";
 
 const LandingPage: React.FC = () => {
     const navigate = useNavigate();
+    const meta = PAGE_META.home;
+
+    useSEOMeta({
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        canonicalUrl: SITE_CONFIG.url,
+        structuredData: generateOrganizationSchema(),
+    });
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-emerald-500 via-emerald-100 to-white">
