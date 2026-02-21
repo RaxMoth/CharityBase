@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Search } from "lucide-react";
-import CharityCard from "../../components";
+import { CharityCard } from "../components";
 import { useSEOMeta } from "../utils/seo";
 import { PAGE_META, SITE_CONFIG } from "../config/seo";
 

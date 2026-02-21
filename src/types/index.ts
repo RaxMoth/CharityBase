@@ -45,6 +45,8 @@ export interface CartItem {
 // USER & AUTHENTICATION TYPES
 // ============================================================================
 
+export type UserRole = "admin" | "company_admin" | "employee";
+
 export interface User {
     id: string;
     email: string;
@@ -52,6 +54,8 @@ export interface User {
     avatar?: string;
     joinedDate: Date;
     bio?: string;
+    role: UserRole;
+    companyId?: string;
 }
 
 export interface LoginCredentials {
@@ -161,4 +165,99 @@ export interface ImpactReport {
     metric: string;
     value: number;
     updatedAt: Date;
+}
+
+// ============================================================================
+// B2B COMPANY & EMPLOYEE TYPES
+// ============================================================================
+
+export type SubscriptionTier = "starter" | "professional" | "enterprise";
+
+export interface Company {
+    id: string;
+    name: string;
+    industry: string;
+    employeeCount: number;
+    adminId: string;
+    subscriptionTier: SubscriptionTier;
+    monthlyPrice: number;
+    donationMatchingEnabled: boolean;
+    matchingPercentage: number;
+    stripeCustomerId?: string;
+    stripeConnectAccountId?: string;
+    logo?: string;
+    website?: string;
+    csrContact?: string;
+    csrEmail?: string;
+    createdAt: string;
+    updatedAt: string;
+    active: boolean;
+}
+
+export interface Employee {
+    id: string;
+    companyId: string;
+    email: string;
+    name: string;
+    selectedCharities: string[];
+    monthlyDonationAmount: number;
+    charityAllocations: { [charityId: string]: number };
+    payrollDeductionEnabled: boolean;
+    joinedAt: string;
+    lastDonationDate?: string;
+    totalDonated: number;
+}
+
+export interface CompanyDonation {
+    id: string;
+    companyId: string;
+    employeeId: string;
+    charityId: string;
+    amount: number;
+    companyMatch?: number;
+    donationDate: string;
+    status: "pending" | "completed" | "failed";
+    stripePaymentId?: string;
+}
+
+export interface EmployeeInvite {
+    id: string;
+    companyId: string;
+    email: string;
+    token: string;
+    expiresAt: string;
+    accepted: boolean;
+    createdAt: string;
+}
+
+export interface CompanyMetrics {
+    companyId: string;
+    totalEmployeesEnrolled: number;
+    totalDonationsThisMonth: number;
+    totalCompanyMatchThisMonth: number;
+    topCharities: string[];
+    participationRate: number;
+    lastUpdated: string;
+}
+
+export interface CSRReport {
+    companyId: string;
+    month: string;
+    year: number;
+    totalDonations: number;
+    totalMatch: number;
+    employeesParticipating: number;
+    charitiesSupported: string[];
+    impactMetrics: { [charityId: string]: ImpactMetrics };
+    generatedAt: string;
+}
+
+export interface TaxReceipt {
+    id: string;
+    employeeId: string;
+    donationId: string;
+    year: number;
+    totalAmount: number;
+    charities: { id: string; amount: number }[];
+    generatedAt: string;
 }

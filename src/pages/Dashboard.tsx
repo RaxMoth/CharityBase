@@ -1,10 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuthStore } from "../../stores";
-import { useAppStore } from "../../stores";
+import { useAuthStore } from "../stores";
+import { useAppStore } from "../stores";
 import { LogOut, Plus, Trash2, Heart } from "lucide-react";
 import { useSEOMeta } from "../utils/seo";
 import { PAGE_META, SITE_CONFIG } from "../config/seo";
+import type { CartItem } from "../stores/useAppStore";
 
 const Dashboard: React.FC = () => {
     const navigate = useNavigate();
@@ -117,7 +118,7 @@ const Dashboard: React.FC = () => {
 
                             {cart.length > 0 ? (
                                 <div className="space-y-4">
-                                    {cart.map((item) => (
+                                    {cart.map((item: CartItem) => (
                                         <div
                                             key={item.charityId}
                                             className="flex items-center justify-between p-4 bg-emerald-50 rounded-xl border-2 border-emerald-200 hover:border-emerald-300 transition-colors"
